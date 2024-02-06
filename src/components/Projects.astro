@@ -1,8 +1,37 @@
 ---
-import { PROJECTS } from "../constants/PROJECTS";
+import { TECHNOLOGIES } from "../constants/TECHNOLOGIES";
 import ProjectItem from "./ProjectItem.astro";
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const PROJECTS = [
+  {
+    title: `${i18n.PROJECTS[0].TITLE}`,
+    description: `${i18n.PROJECTS[0].DESCRIPTION}`,
+    github: "https://github.com/dani16/colocacion-efectivos-andalucia",
+    link: "https://google.com/",
+    tags: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.ELECTRON,
+      TECHNOLOGIES.TYPESCRIPT,
+      TECHNOLOGIES.TAILWIND,
+    ],
+    image: "/projects/colocacion-efectivos-andalucia.webp",
+  },
+  {
+    title: `${i18n.PROJECTS[1].TITLE}`,
+    description: `${i18n.PROJECTS[1].DESCRIPTION}`,
+    github: "https://github.com/dani16/colocacion-efectivos-andalucia",
+    link: "https://learning-with-games.netlify.app/",
+    tags: [TECHNOLOGIES.REACT, TECHNOLOGIES.TYPESCRIPT, TECHNOLOGIES.TAILWIND],
+    image: "/projects/learning-with-games.webp",
+  },
+];
 ---
 
 <ol class="flex flex-col gap-y-16">
   {PROJECTS.map((project) => <ProjectItem {...project} />)}
 </ol>
+../constants/PROJECTS.js

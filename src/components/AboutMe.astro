@@ -1,3 +1,10 @@
+---
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
 <article class="flex gap-12 mb-10">
   <div class="ring-2 ring-white rounded-2xl">
     <img
@@ -8,26 +15,26 @@
   </div>
   <div class="text-pretty pr-36 [&>p]:mb-4">
     <p>
-      I am Daniel. After completing my <span class="text-yellow-200"
-        >Technical Architecture</span
-      > degree I decided to study the <span class="text-yellow-200"
-        >DAM (Multiplatform Application Development)
-      </span> degree, and from my first <span class="font-mono text-blue-400"
-        >Hello World!</span
-      > I fell in love with programming.
+      {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_1}<span class="text-yellow-200"
+        >{i18n.ABOUT_ME.PARRAGRAPH_1_DEGREE}</span
+      >
+      {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_2}
+      <span class="text-yellow-200">{i18n.ABOUT_ME.PARRAGRAPH_1_GRADE}</span>
+      {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_3}
+      <span class="font-mono text-blue-400"
+        >{i18n.ABOUT_ME.PARRAGRAPH_1_HELLO_WORLD}</span
+      >
+      {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_4}
     </p>
 
     <p>
-      After several years of experience working on support projects for
-      different applications, I am currently focused on finding a job more
-      centered on the developer role. <span class="text-yellow-200">
-        developer role</span
+      {i18n.ABOUT_ME.PARRAGRAPH_2}<span class="text-yellow-200"
+        >{i18n.ABOUT_ME.PARRAGRAPH_2_DESC_1}</span
       >.
     </p>
 
     <p>
-      To achieve this, I am looking to enhance my skills by creating interesting
-      and useful applications for people.
+      {i18n.ABOUT_ME.PARRAGRAPH_3}
     </p>
   </div>
 </article>

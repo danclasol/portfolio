@@ -1,14 +1,20 @@
 ---
+import { getI18N } from "../i18n";
 
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <header
   class="fixed top-0 z-10 w-full flex justify-center items-center py-4 bg-blue-600/10 backdrop-blur-sm"
 >
   <nav class="flex flex-row gap-x-10">
-    <a class="hover:text-blue-400" href="/#experience">Experience</a>
-    <a class="hover:text-blue-400" href="/#projects">Projects</a>
-    <a class="hover:text-blue-400" href="/#about">About me</a>
-    <a class="hover:text-blue-400" href="/#contact">Contact</a>
+    <a class="hover:text-blue-400" href="/#home">{i18n.HEADER_HOME}</a>
+    <a class="hover:text-blue-400" href="/#experience"
+      >{i18n.HEADER_EXPERIENCE}</a
+    >
+    <a class="hover:text-blue-400" href="/#projects">{i18n.HEADER_PROJECTS}</a>
+    <a class="hover:text-blue-400" href="/#about">{i18n.HEADER_ABOUT_ME}</a>
+    <a class="hover:text-blue-400" href="/#contact">{i18n.HEADER_CONTACT}</a>
   </nav>
 </header>

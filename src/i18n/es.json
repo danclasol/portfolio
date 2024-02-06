@@ -1,0 +1,77 @@
+{
+  "SEO_TITLE": "Portfolio Daniel Clark Solis - Oracle PL/SQL Developer",
+  "SEO_DESCRIPTION": "Contrata a Daniel Clark Solis",
+  "HEADER_HOME": "Inicio",
+  "HEADER_EXPERIENCE": "Experiencia",
+  "HEADER_PROJECTS": "Proyectos",
+  "HEADER_ABOUT_ME": "Sobre mí",
+  "HEADER_CONTACT": "Contacto",
+  "INTRO_GREETING": "Hola, soy ",
+  "INTRO_NAME": "Daniel Clark",
+  "INTRO_JOB": "Programador Oracle PL/SQL y Java",
+  "INTRO_DESCRIPTION": "5+ años de experiencia como ",
+  "INTRO_LOCATION": "De Cádiz, Andalucía, España",
+  "INTRO_BUTTON_CV": "Descargar CV",
+  "EXPERIENCE_TITLE": "Experiencia",
+  "EXPERIENCE_CURRENT": "Actualmente",
+  "EXPERIENCES": [
+    {
+      "DATE_START": "nov 2021",
+      "TITLE": "Oracle PL/SQL Developer",
+      "COMPANY": "Altia",
+      "DESCRIPTION": "Desktop application aimed at facilitating substitute teachers in the education system of Andalusia the process of filling out the list of destination codes required annually within the framework of competitive examinations."
+    },
+    {
+      "DATE_START": "sep 2017",
+      "DATE_END": "nov 2021",
+      "TITLE": "Oracle PL/SQL Developer",
+      "COMPANY": "Onyx CenerSource",
+      "DESCRIPTION": "Support to ensure the correct operation of the company’s production processes. As well as meeting the business needs to facilitate the performance of their task, either by making improvements to the application, by obtaining reports or manipulating and fixing data."
+    },
+    {
+      "DATE_START": "nov 2012",
+      "DATE_END": "nov 2013",
+      "TITLE": "Java Developer",
+      "COMPANY": "Servinform",
+      "DESCRIPTION": "Desarrollo de aplicaciones web para el área de Cobro y Facturación de Endesa. Así, como mantener tantos aplicaciones existentes como procesos de bases de datos."
+    },
+    {
+      "DATE_START": "nov 2012",
+      "DATE_END": "nov 2013",
+      "TITLE": "Oracle PL/SQL Developer",
+      "COMPANY": "Accenture",
+      "DESCRIPTION": "Realización de funciones de desarrollo evolutivo y correctivo para la aplicación informática de reservas de la touroperadora internacional de viajes TUI."
+    }
+  ],
+  "PROJECTS_TITLE": "Proyectos",
+  "PROJECTS_BUTTON_CODE": "Código",
+  "PROJECTS_BUTTON_PREVIEW": "Demo",
+  "PROJECTS": [
+    {
+      "TITLE": "Colocacion Efectivos Andalucia",
+      "DESCRIPTION": "Aplicación de escritorio destinada a facilitar a los interinos de la bolsa de educación de Andalucía el proceso de rellenar el listado de códigos de destino requeridos anualmente en el marco de las oposiciones."
+    },
+    {
+      "TITLE": "Learning with games",
+      "DESCRIPTION": "Aplicación web para crear juegos educativos personalizados de manera sencilla y efectiva. Diseñada para educadores, padres y cualquier persona interesada en proporcionar una aprendizaje divertido y adaptado a sus necesidades."
+    }
+  ],
+  "ABOUT_ME": {
+    "TITLE": "Sobre mí",
+    "PARRAGRAPH_1_DESC_1": "Soy Daniel. Despues de terminar mi carrera de ",
+    "PARRAGRAPH_1_DESC_2": "decidí estudiar el grado de ",
+    "PARRAGRAPH_1_DESC_3": "y desde mi primer",
+    "PARRAGRAPH_1_DESC_4": "quede enamorado de la programación.",
+    "PARRAGRAPH_1_DEGREE": "Arquitectura Técnica",
+    "PARRAGRAPH_1_GRADE": "DAM (Desarrollo de Aplicaciones Multiplatforma)",
+    "PARRAGRAPH_1_HELLO_WORLD": "Hola Mundo!",
+    "PARRAGRAPH_2": "Tras varios años de experiencia trabajando en proyetos de soporte de diferentes aplicaciones, actualmente estoy enfocado en encontrar un trabajo mas enfocado en el ",
+    "PARRAGRAPH_2_DESC_1": "rol de desarrollador",
+    "PARRAGRAPH_3": "Para ello, busco mejorar mis capacidades creando aplicaciones interesantes y de útilidad para las personas."
+  },
+  "YEAR_LABEL": "año",
+  "YEARS_LABEL": "años",
+  "MONTH_LABEL": "mes",
+  "MONTHS_LABEL": "meses",
+  "DATES_LINK_LABEL": "y"
+}

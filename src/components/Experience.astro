@@ -1,6 +1,44 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-import { EXPERIENCE } from "../constants/EXPERIENCE";
+import { TECHNOLOGIES } from "../constants/TECHNOLOGIES";
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const EXPERIENCE = [
+  {
+    date_start: `${i18n.EXPERIENCES[0].DATE_START}`,
+    title: `${i18n.EXPERIENCES[0].TITLE}`,
+    company: `${i18n.EXPERIENCES[0].COMPANY}`,
+    description: `${i18n.EXPERIENCES[0].DESCRIPTION}`,
+    tags: [TECHNOLOGIES.ORACLE],
+  },
+  {
+    date_start: `${i18n.EXPERIENCES[1].DATE_START}`,
+    date_end: `${i18n.EXPERIENCES[1].DATE_END}`,
+    title: `${i18n.EXPERIENCES[1].TITLE}`,
+    company: `${i18n.EXPERIENCES[1].COMPANY}`,
+    description: `${i18n.EXPERIENCES[1].DESCRIPTION}`,
+    tags: [TECHNOLOGIES.ORACLE],
+  },
+  {
+    date_start: `${i18n.EXPERIENCES[2].DATE_START}`,
+    date_end: `${i18n.EXPERIENCES[2].DATE_END}`,
+    title: `${i18n.EXPERIENCES[2].TITLE}`,
+    company: `${i18n.EXPERIENCES[2].COMPANY}`,
+    description: `${i18n.EXPERIENCES[2].DESCRIPTION}`,
+    tags: [TECHNOLOGIES.JAVA, TECHNOLOGIES.ORACLE],
+  },
+  {
+    date_start: `${i18n.EXPERIENCES[3].DATE_START}`,
+    date_end: `${i18n.EXPERIENCES[3].DATE_END}`,
+    title: `${i18n.EXPERIENCES[3].TITLE}`,
+    company: `${i18n.EXPERIENCES[3].COMPANY}`,
+    description: `${i18n.EXPERIENCES[3].DESCRIPTION}`,
+    tags: [TECHNOLOGIES.ORACLE],
+  },
+];
 ---
 
 <ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">

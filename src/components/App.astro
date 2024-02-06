@@ -1,0 +1,91 @@
+---
+import LinkButton from "./LinkButton.astro";
+import Layout from "../layouts/Layout.astro";
+import Button from "./Button.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
+import DownloadIcon from "./icons/DownloadIcon.astro";
+import Experience from "./Experience.astro";
+import BriefcaseIcon from "./icons/BriefcaseIcon.astro";
+import CodeIcon from "./icons/CodeIcon.astro";
+import Projects from "./Projects.astro";
+import AboutMe from "./AboutMe.astro";
+import AboutMeIcon from "./icons/AboutMeIcon.astro";
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+  <main class="max-w-5xl px-4 m-auto flex flex-col">
+    <section id="home" class="flex items-center gap-x-14 pt-36 pb-10">
+      <div class="flex flex-col gap-y-10">
+        <div class="flex flex-col gap-y-1">
+          <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+            {i18n.INTRO_GREETING}
+            <span class="text-blue-400">{i18n.INTRO_NAME}</span>
+          </h1>
+          <h2 class="text-2xl text-wrap">
+            {i18n.INTRO_DESCRIPTION}
+            <span class="text-yellow-200">{i18n.INTRO_JOB}</span>.
+          </h2>
+          <span class="text-red-200 opacity-80">{i18n.INTRO_LOCATION}</span>
+        </div>
+
+        <ul class="flex items-center gap-3">
+          <li>
+            <LinkButton
+              href="https://www.linkedin.com/in/daniel-clark-sol%C3%ADs/"
+            >
+              <LinkedinIcon class="size-6 text-white" />
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton href="https://github.com/danclasol">
+              <GithubIcon class="size-6 text-white" />
+            </LinkButton>
+          </li>
+          <li>
+            <Button>
+              <MailIcon class="size-6 text-white" />
+              danclasol16@gmail.com
+            </Button>
+          </li>
+          <li>
+            <LinkButton href="/CV2021.pdf" download="CV" filled>
+              <DownloadIcon class="size-6 text-white" />
+              {i18n.INTRO_BUTTON_CV}
+            </LinkButton>
+          </li>
+        </ul>
+      </div>
+      <div class="ring-2 ring-white overflow-hidden rounded-full">
+        <img
+          class="rounded-full size-52 aspect-square object-cover p-2"
+          src="/photo.jpg"
+          alt="Avatar"
+        />
+      </div>
+    </section>
+    <section id="experience" class="flex flex-col gap-y-4 pt-20">
+      <h2 class="font-bold text-3xl text-wrap flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-8" />{i18n.EXPERIENCE_TITLE}
+      </h2>
+      <Experience />
+    </section>
+    <section id="projects" class="flex flex-col gap-y-4 pt-20">
+      <h2 class="font-bold text-3xl text-wrap flex gap-x-3 items-center">
+        <CodeIcon class="size-8" />{i18n.PROJECTS_TITLE}
+      </h2>
+      <Projects />
+    </section>
+    <section id="about" class="flex flex-col gap-y-4 pt-20">
+      <h2 class="font-bold text-3xl text-wrap flex gap-x-3 items-center">
+        <AboutMeIcon class="size-8" />{i18n.ABOUT_ME.TITLE}
+      </h2>
+      <AboutMe />
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,48 @@
+{
+  "SEO_TITLE": "Portfolio Daniel Clark Solis - Oracle PL/SQL Developer",
+  "SEO_DESCRIPTION": "Contrata a Daniel Clark Solis",
+  "HEADER_HOME": "Home",
+  "HEADER_EXPERIENCE": "Experience",
+  "HEADER_PROJECTS": "Projects",
+  "HEADER_ABOUT_ME": "About me",
+  "HEADER_CONTACT": "Contact",
+  "INTRO_GREETING": "Hi, I'm ",
+  "INTRO_NAME": "Daniel Clark",
+  "INTRO_JOB": "Oracle PL/SQL and Java Developer",
+  "INTRO_DESCRIPTION": "5+ years of experience as a ",
+  "INTRO_LOCATION": "From Cádiz, Andalucía, España",
+  "INTRO_BUTTON_CV": "Download CV",
+  "EXPERIENCE_TITLE": "Experience",
+  "EXPERIENCE_CURRENT": "Current",
+  "PROJECTS_TITLE": "Projects",
+  "PROJECTS_BUTTON_CODE": "Code",
+  "PROJECTS_BUTTON_PREVIEW": "Preview",
+  "PROJECTS": [
+    {
+      "TITLE": "Colocacion Efectivos Andalucia",
+      "DESCRIPTION": "Desktop application aimed at facilitating substitute teachers in the education system of Andalusia the process of filling out the list of destination codes required annually within the framework of competitive examinations."
+    },
+    {
+      "TITLE": "Learning with games",
+      "DESCRIPTION": "Web application for easily and effectively creating personalized educational games. Designed for educators, parents, and anyone interested in providing fun and tailored learning experiences according to their needs."
+    }
+  ],
+  "ABOUT_ME": {
+    "TITLE": "About me",
+    "PARRAGRAPH_1_DESC_1": "Hi I'm Daniel. After completing my ",
+    "PARRAGRAPH_1_DESC_2": "I decided to study the ",
+    "PARRAGRAPH_1_DESC_3": "degree, and from my first",
+    "PARRAGRAPH_1_DESC_4": "I fell in love with programming.",
+    "PARRAGRAPH_1_DEGREE": "Technical Architecture",
+    "PARRAGRAPH_1_GRADE": "DAM (Multiplatform Application Development)",
+    "PARRAGRAPH_1_HELLO_WORLD": "Hello World!",
+    "PARRAGRAPH_2": "After several years of experience working on support projects for different applications, I am currently focused on finding a job more centered on a ",
+    "PARRAGRAPH_2_DESC_1": "developer role",
+    "PARRAGRAPH_3": "To achieve this, I am looking to enhance my skills by creating interesting and useful applications for people."
+  },
+  "YEAR_LABEL": "year",
+  "YEARS_LABEL": "years",
+  "MONTH_LABEL": "month",
+  "MONTHS_LABEL": "months",
+  "DATES_LINK_LABEL": "and"
+}

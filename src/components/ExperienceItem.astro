@@ -1,5 +1,9 @@
 ---
 import { getDateDifference } from "./../utils/dates.ts";
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 
 interface Props {
   date_start: string;
@@ -12,11 +16,17 @@ interface Props {
 
 const { date_start, date_end, title, company, description, tags } = Astro.props;
 const dateDiff = getDateDifference(date_start, date_end || "");
+
+const getLocalMonthName = (date: string) => {
+  const dateObj = new Date(date);
+  const month = dateObj.toLocaleString("default", { month: "long" });
+  return month;
+};
 ---
 
 <li class="mb-10 ms-8 pr-28">
   <div
-    class="absolute size-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+    class="absolute size-3 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
   >
   </div>
 
@@ -37,16 +47,18 @@ const dateDiff = getDateDifference(date_start, date_end || "");
   <div>
     <time class="mb-1 text-sm font-bold">{date_start}</time>
     -
-    <time class="mb-1 text-sm font-bold">{date_end || "Current"}</time>
-    <span class="text-sm opacity-80 ml-2">{dateDiff}</span>
+    <time class="mb-1 text-sm font-bold"
+      >{date_end || `${i18n.EXPERIENCE_CURRENT}`}
+      <span class="text-sm opacity-80 ml-2">{dateDiff}</span>
+    </time>
+    <h3 class="text-2xl font-bold text-blue-400">
+      {title}
+    </h3>
+    <h4 class="text-xl mb-2">
+      {company}
+    </h4>
+    <p class="mb-4 text-base font-normal text-pretty text-gray-300">
+      {description}
+    </p>
   </div>
-  <h3 class="text-2xl font-bold text-blue-400">
-    {title}
-  </h3>
-  <h4 class="text-xl mb-2">
-    {company}
-  </h4>
-  <p class="mb-4 text-base font-normal text-pretty text-gray-300">
-    {description}
-  </p>
 </li>
