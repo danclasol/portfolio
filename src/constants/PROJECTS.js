@@ -1,4 +1,4 @@
-import { TECHNOLOGIES } from "./TECHNOLOGIES";
+import { TECHNOLOGIES } from "@constants/TECHNOLOGIES";
 
 export const PROJECTS = [
   {

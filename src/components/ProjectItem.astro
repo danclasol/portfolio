@@ -1,11 +1,11 @@
 ---
-import LinkButton from "./LinkButton.astro";
-import GithubIcon from "../components/icons/GithubIcon.astro";
-import RocketIcon from "../components/icons/RocketIcon.astro";
-import { getI18N } from "../i18n";
+import LinkButton from "@components/LinkButton.astro";
+import GithubIcon from "@components/icons/GithubIcon.astro";
+import RocketIcon from "@components/icons/RocketIcon.astro";
+import { getI18n } from "@i18n/index";
 
 const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const i18n = getI18n({ currentLocale });
 
 interface Props {
   title: string;

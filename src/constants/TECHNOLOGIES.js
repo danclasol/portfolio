@@ -1,9 +1,9 @@
-import ReactIcon from "../components/icons/ReactIcon.astro";
-import JavaIcon from "../components/icons/JavaIcon.astro";
-import OracleIcon from "../components/icons/OracleIcon.astro";
-import TailwindIcon from "../components/icons/TailwindIcon.astro";
-import TypeScriptIcon from "../components/icons/TypeScriptIcon.astro";
-import ElectronIcon from "../components/icons/ElectronIcon.astro";
+import ElectronIcon from "@components/icons/ElectronIcon.astro";
+import JavaIcon from "@components/icons/JavaIcon.astro";
+import OracleIcon from "@components/icons/OracleIcon.astro";
+import ReactIcon from "@components/icons/ReactIcon.astro";
+import TailwindIcon from "@components/icons/TailwindIcon.astro";
+import TypeScriptIcon from "@components/icons/TypeScriptIcon.astro";
 
 export const TECHNOLOGIES = {
   REACT: {

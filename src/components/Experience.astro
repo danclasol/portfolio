@@ -1,10 +1,10 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro";
-import { TECHNOLOGIES } from "../constants/TECHNOLOGIES";
-import { getI18N } from "../i18n";
+import ExperienceItem from "@components/ExperienceItem.astro";
+import { TECHNOLOGIES } from "@constants/TECHNOLOGIES";
+import { getI18n } from "@i18n/index";
 
 const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const i18n = getI18n({ currentLocale });
 
 const EXPERIENCE = [
   {

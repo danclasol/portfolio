@@ -1,21 +1,21 @@
 ---
-import LinkButton from "./LinkButton.astro";
-import Layout from "../layouts/Layout.astro";
-import Button from "./Button.astro";
-import GithubIcon from "./icons/GithubIcon.astro";
-import LinkedinIcon from "./icons/LinkedinIcon.astro";
-import MailIcon from "./icons/MailIcon.astro";
-import DownloadIcon from "./icons/DownloadIcon.astro";
-import Experience from "./Experience.astro";
-import BriefcaseIcon from "./icons/BriefcaseIcon.astro";
-import CodeIcon from "./icons/CodeIcon.astro";
-import Projects from "./Projects.astro";
-import AboutMe from "./AboutMe.astro";
-import AboutMeIcon from "./icons/AboutMeIcon.astro";
-import { getI18N } from "../i18n";
+import LinkButton from "@components/LinkButton.astro";
+import Layout from "@layouts/Layout.astro";
+import Button from "@components/Button.astro";
+import GithubIcon from "@components/icons/GithubIcon.astro";
+import LinkedinIcon from "@components/icons/LinkedinIcon.astro";
+import MailIcon from "@components/icons/MailIcon.astro";
+import DownloadIcon from "@components/icons/DownloadIcon.astro";
+import Experience from "@components/Experience.astro";
+import BriefcaseIcon from "@components/icons/BriefcaseIcon.astro";
+import CodeIcon from "@components/icons/CodeIcon.astro";
+import Projects from "@components/Projects.astro";
+import AboutMe from "@components/AboutMe.astro";
+import AboutMeIcon from "@components/icons/AboutMeIcon.astro";
+import { getI18n } from "@i18n/index";
 
 const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const i18n = getI18n({ currentLocale });
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
@@ -81,7 +81,7 @@ const i18n = getI18N({ currentLocale });
       </h2>
       <Projects />
     </section>
-    <section id="about" class="flex flex-col gap-y-4 pt-20">
+    <section id="about" class="flex flex-col gap-y-4 py-20">
       <h2 class="font-bold text-3xl text-wrap flex gap-x-3 items-center">
         <AboutMeIcon class="size-8" />{i18n.ABOUT_ME.TITLE}
       </h2>

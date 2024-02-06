@@ -1,10 +1,10 @@
 ---
-import { TECHNOLOGIES } from "../constants/TECHNOLOGIES";
-import ProjectItem from "./ProjectItem.astro";
-import { getI18N } from "../i18n";
+import { TECHNOLOGIES } from "@constants/TECHNOLOGIES";
+import ProjectItem from "@components/ProjectItem.astro";
+import { getI18n } from "@i18n/index";
 
 const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const i18n = getI18n({ currentLocale });
 
 const PROJECTS = [
   {
@@ -34,4 +34,3 @@ const PROJECTS = [
 <ol class="flex flex-col gap-y-16">
   {PROJECTS.map((project) => <ProjectItem {...project} />)}
 </ol>
-../constants/PROJECTS.js
