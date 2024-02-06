@@ -1,0 +1,48 @@
+---
+import LinkButton from "./LinkButton.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import RocketIcon from "../components/icons/RocketIcon.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  github?: string;
+  link?: string;
+  image: string;
+  tags: Array<{ name: string; class: string; icon: any }>;
+}
+
+const { image, title, description, link, github, tags } = Astro.props;
+---
+
+<article class="flex gap-x-12">
+  <img src={image} class="rounded-xl w-[450px] object-cover" alt="title" />
+  <div class="flex flex-col">
+    <h3 class="text-2xl font-semibold text-blue-400 mb-1">{title}</h3>
+    <p class="mb-4 text-pretty text-base">{description}</p>
+    <ul class="flex gap-2 flex-row flex-wrap mt-2 mb-2">
+      {
+        tags.map((tag) => (
+          <li>
+            <span
+              class={`flex justify-center items-center gap-x-2 border-2 rounded-full text-sm font-bold ${tag.class} py-1 px-2.5 `}
+            >
+              <tag.icon class="size-5" />
+              {tag.name}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class="flex gap-x-4 mt-4">
+      <LinkButton href={github}>
+        <GithubIcon class="size-6 text-white" />
+        <span class="font-semibold">Code</span>
+      </LinkButton>
+      <LinkButton href={link} filled>
+        <RocketIcon class="size-6 text-white" />
+        <span class="font-semibold">Preview</span>
+      </LinkButton>
+    </ul>
+  </div>
+</article>

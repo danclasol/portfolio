@@ -1,0 +1,8 @@
+---
+import { PROJECTS } from "../constants/PROJECTS";
+import ProjectItem from "./ProjectItem.astro";
+---
+
+<ol class="flex flex-col gap-y-16">
+  {PROJECTS.map((project) => <ProjectItem {...project} />)}
+</ol>
