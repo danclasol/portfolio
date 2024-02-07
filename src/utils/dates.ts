@@ -1,11 +1,11 @@
-import { getI18N } from "../i18n";
+import { getI18n } from "@i18n/index";
 
 export function getDateDifference(
   date_start: string,
   date_end?: string,
   currentLocale: string = "es"
 ): string {
-  const i18n = getI18N({ currentLocale });
+  const i18n = getI18n({ currentLocale });
   const yearLabel = i18n.YEAR_LABEL;
   const yearsLabel = i18n.YEARS_LABEL;
   const monthLabel = i18n.MONTH_LABEL;
