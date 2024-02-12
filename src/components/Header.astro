@@ -1,20 +1,33 @@
 ---
 import { getI18n } from "@i18n/index";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslationsRoutes,
+} from "@i18n/utils";
+import LanguageSelector from "@components/LanguageSelector.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18n({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const r = useTranslationsRoutes(lang);
 ---
 
 <header
-  class="fixed top-0 z-10 w-full flex justify-center items-center py-4 bg-blue-600/10 backdrop-blur-sm"
+  class="fixed top-0 z-10 w-full flex gap-x-10 justify-center items-center py-4 bg-blue-600/10 backdrop-blur-sm"
 >
   <nav class="flex flex-row gap-x-10">
-    <a class="hover:text-blue-400" href="/#home">{i18n.HEADER_HOME}</a>
-    <a class="hover:text-blue-400" href="/#experience"
-      >{i18n.HEADER_EXPERIENCE}</a
+    <a class="hover:text-blue-400" href={r("home")}>{t("nav.home")}</a>
+    <a class="hover:text-blue-400" href={r("experience")}
+      >{t("nav.experience")}</a
     >
-    <a class="hover:text-blue-400" href="/#projects">{i18n.HEADER_PROJECTS}</a>
-    <a class="hover:text-blue-400" href="/#about">{i18n.HEADER_ABOUT_ME}</a>
-    <a class="hover:text-blue-400" href="/#contact">{i18n.HEADER_CONTACT}</a>
+    <a class="hover:text-blue-400" href={r("projects")}>{t("nav.projects")}</a>
+    <a class="hover:text-blue-400" href={r("about-me")}>{t("nav.about-me")}</a>
+    <a class="hover:text-blue-400" href={r("contact")}>{t("nav.contact")}</a>
   </nav>
+  <div>
+    <LanguageSelector />
+  </div>
 </header>

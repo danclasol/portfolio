@@ -20,7 +20,10 @@ const i18n = getI18n({ currentLocale });
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <main class="max-w-5xl px-4 m-auto flex flex-col">
-    <section id="home" class="flex items-center gap-x-14 pt-36 pb-10">
+    <section
+      id={i18n.ROUTE_HOME}
+      class="flex items-center gap-x-14 pt-36 pb-10"
+    >
       <div class="flex flex-col gap-y-10">
         <div class="flex flex-col gap-y-1">
           <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
@@ -69,19 +72,19 @@ const i18n = getI18n({ currentLocale });
         />
       </div>
     </section>
-    <section id="experience" class="flex flex-col gap-y-4 pt-20">
+    <section id={i18n.ROUTE_EXPERIENCE} class="flex flex-col gap-y-4 pt-20">
       <h2 class="font-bold text-3xl text-wrap flex gap-x-3 items-center">
         <BriefcaseIcon class="size-8" />{i18n.EXPERIENCE_TITLE}
       </h2>
       <Experience />
     </section>
-    <section id="projects" class="flex flex-col gap-y-4 pt-20">
+    <section id={i18n.ROUTE_PROJECTS} class="flex flex-col gap-y-4 pt-20">
       <h2 class="font-bold text-3xl text-wrap flex gap-x-3 items-center">
         <CodeIcon class="size-8" />{i18n.PROJECTS_TITLE}
       </h2>
       <Projects />
     </section>
-    <section id="about" class="flex flex-col gap-y-4 py-20">
+    <section id={i18n.ROUTE_ABOUT_ME} class="flex flex-col gap-y-4 py-20">
       <h2 class="font-bold text-3xl text-wrap flex gap-x-3 items-center">
         <AboutMeIcon class="size-8" />{i18n.ABOUT_ME.TITLE}
       </h2>
