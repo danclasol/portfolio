@@ -22,7 +22,9 @@ const { image, title, description, link, github, tags } = Astro.props;
 <article class="flex gap-x-12">
   <img src={image} class="rounded-xl w-[450px] object-cover" alt="title" />
   <div class="flex flex-col">
-    <h3 class="text-2xl font-semibold text-blue-400 mb-1">{title}</h3>
+    <h3 class="text-2xl font-semibold text-blue-500 dark:text-blue-400 mb-1">
+      {title}
+    </h3>
     <p class="mb-4 text-pretty text-base">{description}</p>
     <ul class="flex gap-2 flex-row flex-wrap mt-2 mb-2">
       {
@@ -40,11 +42,11 @@ const { image, title, description, link, github, tags } = Astro.props;
     </ul>
     <ul class="flex gap-x-4 mt-4">
       <LinkButton href={github}>
-        <GithubIcon class="size-6 text-white" />
+        <GithubIcon class="size-6" />
         <span class="font-semibold">{i18n.PROJECTS_BUTTON_CODE}</span>
       </LinkButton>
       <LinkButton href={link} filled>
-        <RocketIcon class="size-6 text-white" />
+        <RocketIcon class="size-6" />
         <span class="font-semibold">{i18n.PROJECTS_BUTTON_PREVIEW}</span>
       </LinkButton>
     </ul>

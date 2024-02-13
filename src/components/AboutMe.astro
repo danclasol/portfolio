@@ -6,29 +6,34 @@ const i18n = getI18n({ currentLocale });
 ---
 
 <article class="flex gap-12 mb-10">
-  <div class="ring-2 ring-white rounded-2xl">
+  <div class="border-4 border-slate-700 dark:border-white rounded-2xl p-1.5">
     <img
       src="/photo.jpg"
       alt="About me"
-      class="p-2 rounded-2xl object-cover w-[580px] h-full"
+      class="rounded-xl object-cover w-[580px] h-full border-2 border-slate-700 dark:border-transparent"
     />
   </div>
   <div class="text-pretty pr-36 [&>p]:mb-4">
     <p>
-      {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_1}<span class="text-yellow-200"
+      {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_1}<span
+        class="text-yellow-500 dark:text-yellow-200"
         >{i18n.ABOUT_ME.PARRAGRAPH_1_DEGREE}</span
       >
       {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_2}
-      <span class="text-yellow-200">{i18n.ABOUT_ME.PARRAGRAPH_1_GRADE}</span>
+      <span class="text-yellow-500
+        dark:text-yellow-200"
+        >{i18n.ABOUT_ME.PARRAGRAPH_1_GRADE}</span
+      >
       {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_3}
-      <span class="font-mono text-blue-400"
+      <span class="font-mono text-blue-500 dark:text-blue-400"
         >{i18n.ABOUT_ME.PARRAGRAPH_1_HELLO_WORLD}</span
       >
       {i18n.ABOUT_ME.PARRAGRAPH_1_DESC_4}
     </p>
 
     <p>
-      {i18n.ABOUT_ME.PARRAGRAPH_2}<span class="text-yellow-200"
+      {i18n.ABOUT_ME.PARRAGRAPH_2}<span
+        class="text-yellow-500 dark:text-yellow-200"
         >{i18n.ABOUT_ME.PARRAGRAPH_2_DESC_1}</span
       >.
     </p>

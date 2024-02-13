@@ -11,12 +11,15 @@ const { filled } = Astro.props;
      px-4 py-2.5
      flex items-center gap-x-3   
      border-2  
+     truncate
     `,
     {
-      "bg-blue-400/30 border-transparent hover:bg-blue-400": filled,
+      "bg-blue-500 dark:bg-blue-400/30 border-transparent text-white hover:bg-blue-400/60 hover:dark:bg-blue-400":
+        filled,
     },
     {
-      "border-white hover:bg-blue-400 hover:border-transparent": !filled,
+      "border-blue-500 text-blue-500 dark:text-white hover:text-white hover:border-transparent dark:border-white hover:bg-blue-400/70 hover:dark:bg-blue-400/70 hover:dark:border-transparent":
+        !filled,
     },
   ]}
   {...Astro.props}

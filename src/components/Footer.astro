@@ -6,22 +6,22 @@ import MailIcon from "@components/icons/MailIcon.astro";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-blue-400/10">
+<footer class="bg-slate-300/20 dark:bg-blue-400/10">
   <div
-    class="max-w-5xl mx-auto w-full p-4 flex gap-x-8 justify-around items-center overflow-hidden rounded-xl px-8 text-zinc-200/90 text-sm"
+    class="max-w-5xl mx-auto w-full p-4 flex gap-x-8 justify-around items-center overflow-hidden rounded-xl px-8 text-sm"
   >
     <span>{currentYear} - Daniel Clark Solis</span>
 
     <div class="flex gap-x-4 justify-center items-center">
       <div class="flex gap-x-2 items-center">
-        <MailIcon class="size-6 text-white stroke-1" />
+        <MailIcon class="size-6 stroke-1" />
         <span>danclasol16@gmail.com</span>
       </div>
       <a href="https://www.linkedin.com/in/daniel-clark-sol%C3%ADs/">
-        <LinkedinIcon class="size-6 text-white" />
+        <LinkedinIcon class="size-6" />
       </a>
       <a href="https://github.com/danclasol">
-        <GithubIcon class="size-6 text-white" />
+        <GithubIcon class="size-6" />
       </a>
     </div>
   </div>

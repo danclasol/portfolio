@@ -12,7 +12,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
 
 <div class="relative inline-block text-left">
   <div
-    class="group text-white rounded-md text-xs font-semibold bg-black/30 hover:bg-black/70 transition-all"
+    class="group text-black dark:text-white rounded-md text-xs font-semibold bg-gray-400/30 dark:bg-black/30 hover:bg-gray-400/50 hover:dark:bg-black/70 transition-all"
   >
     <button
       type="button"
@@ -31,7 +31,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
         otherLocales.map((locale) => (
           <li class="py-[2px]">
             <a
-              class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+              class="rounded-md bg-gray-400/30 dark:bg-black/30 hover:bg-gray-400/50 hover:dark:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
               href={`/${locale.code === "en" ? locale.code : ""}`}
             >
               <locale.flag class="size-30" />
