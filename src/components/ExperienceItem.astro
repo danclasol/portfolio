@@ -24,41 +24,49 @@ const getLocalMonthName = (date: string) => {
 };
 ---
 
-<li class="mb-10 ms-8 pr-28">
-  <div
-    class="absolute size-3 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-  >
-  </div>
+<li
+  class="flex -mt-16 even:justify-end
+  before:absolute before:size-6 before:bg-gray-200 before:rounded-full before:mt-[70px] before:left-[50%] before:transform before:-translate-x-1/2 before:border-2 before:border-white before:dark:border-gray-600 before:dark:bg-gray-500
+  after:absolute after:h-[300px] after:bg-gray-200 after:-mt-5 after:left-[50%] after:transform after:-translate-x-1/2 after:border-2 after:border-white after:dark:border-gray-600 after:dark:bg-gray-700 after:-z-10"
+>
+  <div class="w-[450px] justify-end rounded-lg pt-6 px-10 pb-8 bg-slate-600/20">
+    <!-- <div
+      class="absolute size-5 bg-gray-200 rounded-full mt-2.5 -start-1.5 border-2 border-white dark:border-gray-900/70 dark:bg-gray-700"
+    >
+    </div> -->
 
-  <ul class="flex gap-2 flex-row flex-wrap mt-2 mb-2">
-    {
-      tags.map((tag) => (
-        <li>
-          <span
-            class={`flex justify-center items-center gap-x-2 border-2 rounded-full text-sm font-bold ${tag.class} py-1 px-2.5 `}
-          >
-            <tag.icon class="size-5" />
-            {tag.name}
-          </span>
-        </li>
-      ))
-    }
-  </ul>
-  <div>
-    <time class="mb-1 text-sm font-bold">{date_start}</time>
-    -
-    <time class="mb-1 text-sm font-bold"
-      >{date_end || `${i18n.EXPERIENCE_CURRENT}`}
-      <span class="text-sm opacity-80 ml-2">{dateDiff}</span>
-    </time>
-    <h3 class="text-2xl font-bold text-blue-400">
-      {title}
-    </h3>
-    <h4 class="text-xl mb-2">
-      {company}
-    </h4>
-    <p class="mb-4 text-base font-normal text-pretty text-gray-300">
-      {description}
-    </p>
+    <ul class="flex gap-2 flex-row flex-wrap mb-2">
+      {
+        tags.map((tag) => (
+          <li>
+            <span
+              class={`flex justify-center items-center gap-x-2 border-2 rounded-full text-sm font-bold ${tag.class} py-1 px-2.5 `}
+            >
+              <tag.icon class="size-5" />
+              {tag.name}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+    <div>
+      <div>
+        <time class="mb-1 text-sm font-bold">{date_start}</time>
+        -
+        <time class="mb-1 text-sm font-bold"
+          >{date_end || `${i18n.EXPERIENCE_CURRENT}`}
+          <span class="text-sm opacity-80 ml-2">{dateDiff}</span>
+        </time>
+      </div>
+      <h3 class="text-2xl font-bold text-blue-400">
+        {title}
+      </h3>
+      <h4 class="text-xl mb-2">
+        {company}
+      </h4>
+      <p class="mb-4 text-base font-normal text-pretty text-gray-300">
+        {description}
+      </p>
+    </div>
   </div>
 </li>
