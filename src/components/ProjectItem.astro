@@ -20,7 +20,11 @@ const { image, title, description, link, github, tags } = Astro.props;
 ---
 
 <article class="flex gap-x-12">
-  <img src={image} class="rounded-xl w-[450px] object-cover" alt="title" />
+  <img
+    src={image}
+    class="rounded-xl w-[450px] object-cover border border-gray-300 dark:border-slate-600/30"
+    alt="title"
+  />
   <div class="flex flex-col">
     <h3 class="text-2xl font-semibold text-blue-500 dark:text-blue-400 mb-1">
       {title}
