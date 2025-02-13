@@ -1,0 +1,37 @@
+---
+import DarkModeIcon from "./icons/DarkModeIcon.astro";
+import LigthModeIcon from "./icons/LigthModeIcon.astro";
+---
+
+<div class="relative inline-block text-left">
+  <div
+    class="group text-white rounded-full text-xs font-semibold hover:bg-black/70 transition-all"
+  >
+    <button
+      type="button"
+      class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+      aria-expanded="true"
+      aria-haspopup="true"
+    >
+      <!-- <LanguageIcon class="size-4" /> -->
+      <DarkModeIcon class="size-5" />
+      <LigthModeIcon class="size-7" />
+    </button>
+    <ul
+      class="rounded-lg group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 absolute w-full pt-0.5"
+    >
+      <li
+        class="bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2 rounded-t-lg"
+      >
+        <DarkModeIcon class="size-5" />
+        Dark
+      </li>
+      <li
+        class="bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2 rounded-b-lg"
+      >
+        <LigthModeIcon class="size-7" />
+        Ligth
+      </li>
+    </ul>
+  </div>
+</div>

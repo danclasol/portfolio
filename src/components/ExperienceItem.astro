@@ -1,6 +1,7 @@
 ---
 import { getDateDifference } from "@utils/dates.ts";
 import { getI18n } from "@i18n/index";
+import OracleIcon from "./icons/OracleIcon.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18n({ currentLocale });
@@ -11,7 +12,7 @@ interface Props {
   title: string;
   company: string;
   description: string;
-  tags: Array<{ name: string; class: string; icon: any }>;
+  tags: Array<{ name: string; class: string; icon: typeof OracleIcon }>;
 }
 
 const { date_start, date_end, title, company, description, tags } = Astro.props;
@@ -26,7 +27,7 @@ const getLocalMonthName = (date: string) => {
 
 <li
   class="flex -mt-20 even:justify-end
-  before:rounded-full before:absolute before:size-4 before:mt-[58px] before:left-[50%] before:transform before:-translate-x-1/2
+  before:rounded-full before:absolute before:size-4 before:mt-[64px] before:left-[50%] before:transform before:-translate-x-1/2
   before:border-2 before:border-gray-300 before:dark:border-slate-500 before:bg-gray-200 before:dark:bg-slate-400
   after:absolute after:h-[300px] after:-mt-5 after:left-[50%] after:transform after:-translate-x-1/2
   after:border-2 after:border-slate-300/70 after:dark:border-gray-600 after:bg-gray-200 after:dark:bg-gray-700 after:-z-10"
